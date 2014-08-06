@@ -31,6 +31,51 @@ class AdminlteServiceProvider extends ServiceProvider {
         $this->app['breadcrumbs'] = $this->app->share(function() {
             return new Helpers\Breadcrumbs();
         });
+        $this->app['assets'] = $this->app->share(function() {
+            return new Helpers\Assets();
+        });
+        $js_assets = [
+            "http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js",
+            "http://code.jquery.com/jquery-migrate-1.2.1.min.js",
+            "packages/mrjuliuss/syntara/assets/js/dashboard/base.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/jquery-ui-1.10.3.min.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/bootstrap.min.js",
+            "//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/morris/morris.min.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/sparkline/jquery.sparkline.min.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/fullcalendar/fullcalendar.min.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/jqueryKnob/jquery.knob.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/daterangepicker/daterangepicker.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/iCheck/icheck.min.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/datatables/jquery.dataTables.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/datatables/dataTables.bootstrap.js",
+            "packages/jakubsacha/adminlte/AdminLTE/js/AdminLTE/app.js",
+            "packages/jakubsacha/adminlte/js/app.js",
+        ];
+        foreach($js_assets as $js)
+        {
+            app('assets')->registerJs($js);
+        }
+        $css_assets = [
+            "packages/jakubsacha/adminlte/AdminLTE/css/bootstrap.min.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/font-awesome.min.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/ionicons.min.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/morris/morris.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/jvectormap/jquery-jvectormap-1.2.2.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/fullcalendar/fullcalendar.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/daterangepicker/daterangepicker-bs3.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/AdminLTE.css",
+            "packages/jakubsacha/adminlte/AdminLTE/css/datatables/dataTables.bootstrap.css",
+            "packages/jakubsacha/adminlte/css/AdminLTE.css",
+        ];
+        foreach($css_assets as $css)
+        {
+            app('assets')->registerCss($css);
+        }
     }
 
     /**
@@ -54,6 +99,9 @@ class AdminlteServiceProvider extends ServiceProvider {
             // Alias the Gravatar package
             if (empty($aliases['Gravatar'])) {
                 $loader->alias('Gravatar', 'Thomaswelton\LaravelGravatar\Facades\Gravatar');
+            }
+            if (empty($aliases['Assets'])) {
+                $loader->alias('Assets', 'Jakubsacha\Adminlte\Facades\AssetsFacade');
             }
         });
     }
