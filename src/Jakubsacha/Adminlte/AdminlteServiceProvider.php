@@ -50,8 +50,8 @@ class AdminlteServiceProvider extends ServiceProvider {
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/daterangepicker/daterangepicker.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/iCheck/icheck.min.js",
-            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/datatables/jquery.dataTables.js",
-            "packages/jakubsacha/adminlte/AdminLTE/js/plugins/datatables/dataTables.bootstrap.js",
+            "//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js",
+            "//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/AdminLTE/app.js",
             "packages/jakubsacha/adminlte/js/app.js",
         ];
