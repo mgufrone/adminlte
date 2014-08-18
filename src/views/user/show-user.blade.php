@@ -24,12 +24,12 @@
                                 <input class="col-lg-12 form-control" type="password" placeholder="{{ trans('syntara::all.password') }}" id="pass" name="pass" >
                             </div>
                             <div class="form-group">
-                                <label class="control-label">{{ trans('syntara::users.last-name') }}</label>
-                                <input class="col-lg-12 form-control" type="text" id="last_name" name="last_name" value="{{ $user->last_name  }}">
-                            </div>
-                            <div class="form-group">
                                 <label class="control-label">{{ trans('syntara::users.first-name') }}</label>
                                 <input class="col-lg-12 form-control" type="text" id="first_name" name="first_name" value="{{ $user->first_name }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">{{ trans('syntara::users.last-name') }}</label>
+                                <input class="col-lg-12 form-control" type="text" id="last_name" name="last_name" value="{{ $user->last_name  }}">
                             </div>
                         </div>
                         <div class="col-lg-6">
