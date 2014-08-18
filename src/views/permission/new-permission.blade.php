@@ -1,7 +1,6 @@
 @extends(Config::get('syntara::views.master'))
 
 @section('content')
-<script src="{{ asset('packages/mrjuliuss/syntara/assets/js/dashboard/permission.js') }}"></script>
 <div class="row">
     <div class="col-lg-6">
         <div class="box box-primary">

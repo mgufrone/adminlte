@@ -1,7 +1,7 @@
 @extends(Config::get('syntara::views.master'))
 
 @section('content')
-<script src="{{ asset('packages/mrjuliuss/syntara/assets/js/dashboard/user.js') }}"></script>
+<script src="{{ asset() }}"></script>
 <div class="row">
     <div class="col-lg-12">
         <div class="box box-primary">
