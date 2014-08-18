@@ -1,7 +1,6 @@
 @extends(Config::get('syntara::views.master'))
 
 @section('content')
-<script src="{{ asset() }}"></script>
 <div class="row">
     <div class="col-lg-12">
         <div class="box box-primary">
