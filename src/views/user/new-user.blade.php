@@ -25,12 +25,12 @@
                                 <p><input class="col-lg-12 form-control" type="password" placeholder="{{ trans('syntara::all.password') }}" id="pass" name="pass"></p>
                             </div>
                             <div class="form-group">
-                                <label class="control-label">{{ trans('syntara::users.last-name') }}</label>
-                                <p><input class="col-lg-12 form-control" type="text" placeholder="{{ trans('syntara::users.last-name') }}" id="last_name" name="last_name"></p>
-                            </div>
-                            <div class="form-group">
                                 <label class="control-label">{{ trans('syntara::users.first-name') }}</label>
                                 <p><input class="col-lg-12 form-control" type="text" placeholder="{{ trans('syntara::users.first-name') }}" id="first_name" name="first_name"></p>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">{{ trans('syntara::users.last-name') }}</label>
+                                <p><input class="col-lg-12 form-control" type="text" placeholder="{{ trans('syntara::users.last-name') }}" id="last_name" name="last_name"></p>
                             </div>
                         </div>
                         <div class="col-lg-6">

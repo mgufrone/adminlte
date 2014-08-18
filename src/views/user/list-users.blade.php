@@ -41,10 +41,10 @@
                 @endforeach
             </td>
             <td class="hidden-xs">{{ json_encode($user->getPermissions()) }}</td>
-            <td class="visible-lg">&nbsp;{{ $user->last_name }} {{ $user->first_name }}</td>
+            <td class="visible-lg">{{ $user->first_name }} {{ $user->last_name }}</td>
             <td class="hidden-xs">{{ $user->isActivated() ? trans('syntara::all.yes') : '<a class="activate-user" href="#" data-toggle="tooltip" title="'.trans('syntara::users.activate').'">'.trans('syntara::all.no').'</a>'}}</td>
             @if($currentUser->hasAccess('update-user-info'))
-            <td class="hidden-xs">{{ $throttle->isBanned() ? trans('syntara::all.yes') : trans('syntara::all.no')}}</td>        
+            <td class="hidden-xs">{{ $throttle->isBanned() ? trans('syntara::all.yes') : trans('syntara::all.no')}}</td>
             @endif
         </tr>
         @endforeach
