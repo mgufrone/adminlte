@@ -7,7 +7,8 @@
     <div class="col-lg-8">
         <div class="box box-primary">
             <div class="box-body clearfix">
-                <form class="form" id="edit-user-form" method="PUT">
+                <form class="form" id="edit-user-form" method="POST">
+                    <input type="hidden" name="_method" value="PUT" />
                     <div class="row-fluid">
                         <div class="col-lg-6">
                             <div class="form-group">
