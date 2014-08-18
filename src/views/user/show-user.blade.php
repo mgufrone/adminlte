@@ -2,7 +2,6 @@
 
 @section('content')
 
-<script src="{{ asset('packages/mrjuliuss/syntara/assets/js/dashboard/user.js') }}"></script>
 <div class="row">
     <div class="col-lg-8">
         <div class="box box-primary">
