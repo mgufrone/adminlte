@@ -9,14 +9,15 @@ $(document).ajaxComplete(function() {
 
 $('input').on('ifChanged', function(event){
     $(this).trigger('change');
-    $('input').iCheck('update');  
+    $('input').iCheck('update');
 });
+
 
 var showStatusMessage = function(message, type)
 {
     $('.status-message').remove();
     $('.label-danger').remove();
-    
+
     var html = '<div class="row status-message">\n\
                         <div class="col-lg-12">\n\
                             <div class="alert alert-'+type+'">\n\
@@ -24,6 +25,10 @@ var showStatusMessage = function(message, type)
                             </div>\n\
                         </div>\n\
                 </div>';
-            
-    $(html).prependTo('.right-side .content').hide().fadeIn(900);
+    if($('#login-form').size()>0)
+    {
+      $(html).prependTo('#login-form .body').hide().fadeIn(900).find('.alert').addClass('no-margin');
+    }
+    else
+      $(html).prependTo('.right-side .content').hide().fadeIn(900);
 };

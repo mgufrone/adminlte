@@ -19,7 +19,7 @@
         <![endif]-->
     </head>
     <body class="bg-black">
-        
+
         <div class="form-box" id="login-box">
             <div class="header">Sign In</div>
             <form id="login-form"  method="post">
@@ -29,16 +29,16 @@
                     </div>
                     <div class="form-group">
                         <input type="password" name="pass" class="form-control" placeholder="Password" id="pass"/>
-                    </div>          
+                    </div>
                     <!--                    <div class="form-group">
                                             <input type="checkbox" name="remember_me"/> Remember me
                                         </div>-->
                 </div>
-                <div class="footer">                                                               
-                    <button type="submit" class="btn bg-olive btn-block">Sign me in</button>  
-                    <!--                    
+                <div class="footer">
+                    <button type="submit" class="btn bg-olive btn-block">Sign me in</button>
+                    <!--
                                         <p><a href="#">I forgot my password</a></p>
-                                        
+
                                         <a href="register.html" class="text-center">Register a new membership</a>-->
                 </div>
             </form>
@@ -49,7 +49,7 @@
                             <button class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></button>
                             <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
                             <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
-            
+
                         </div>-->
         </div>
 
@@ -57,10 +57,12 @@
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="{{ asset('packages/mrjuliuss/syntara/assets/js/dashboard/base.js') }}"></script>
-        
+
         <script type="text/javascript" src="{{ asset('packages/mrjuliuss/syntara/assets/js/dashboard/login.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('packages/jakubsacha/adminlte/AdminLTE/js/plugins/iCheck/icheck.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('packages/jakubsacha/adminlte/js/app.js') }}"></script>
         <!-- Bootstrap -->
-        <script src="{{ asset("packages/jakubsacha/adminlte/AdminLTE/js/bootstrap.min.js")}}" type="text/javascript"></script>        
+        <script src="{{ asset("packages/jakubsacha/adminlte/AdminLTE/js/bootstrap.min.js")}}" type="text/javascript"></script>
 
     </body>
 </html>
