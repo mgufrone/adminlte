@@ -9,7 +9,7 @@
             </div>
             <div class="box-body">
                 <form class="form" id="edit-group-form" method="POST">
-                    <input name="_method" value="PUT"/>
+                    <input name="_method" type="hidden" value="PUT"/>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
