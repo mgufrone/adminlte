@@ -2,18 +2,8 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <!-- Sidebar user panel -->
-        <div class="user-panel">
-            <div class="pull-left image">
-                <img src="{{Gravatar::src(Sentry::getUser()->email, 215)}}" class="img-circle" alt="User Image" />
-            </div>
-            <div class="pull-left info">
-                <p>Hello, {{ Sentry::getUser()->username }}</p>
 
-                <a href="{{ URL::route('showUser', Sentry::getUser()->id ) }}"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
-        </div>
-        
-        
+
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="active">
@@ -25,7 +15,7 @@
             @if (Sentry::check())
                 @if($currentUser->hasAccess('view-users-list') || $currentUser->hasAccess('groups-management'))
                 <li class="treeview" >
-                    <a href="#"><i class="fa fa-user"></i> 
+                    <a href="#"><i class="fa fa-user"></i>
                         <span>{{ trans('syntara::navigation.users') }}</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
