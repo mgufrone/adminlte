@@ -35,6 +35,7 @@
                                         </div>-->
                 </div>
                 <div class="footer">
+                    <div type="submit" class="text-center btn btn-block loading-area" style="border:none;box-shadow:none;display:none"><i class="fa fa-spin fa-circle-o-notch "></i> Logging in</div>
                     <button type="submit" class="btn bg-olive btn-block">Sign me in</button>
                     <!--
                                         <p><a href="#">I forgot my password</a></p>
