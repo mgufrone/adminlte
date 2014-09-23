@@ -60,14 +60,14 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="glyphicon glyphicon-user"></i>
-                        <span>{{ !empty(Sentry::getUser()->first_name.' '.Sentry::getUser()->last_name) ? Sentry::getUser()->first_name.' '.Sentry::getUser()->last_name : Sentry::getUser()->username }} <i class="caret"></i></span>
+                        <span>{{ !empty(Sentry::getUser()->first_name) ? Sentry::getUser()->first_name.' '.Sentry::getUser()->last_name : Sentry::getUser()->username }} <i class="caret"></i></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header bg-light-blue">
                             <img src="{{Gravatar::src(Sentry::getUser()->email, 215)}}" class="img-circle" alt="User Image" />
                             <p>
-                                {{ !empty(Sentry::getUser()->first_name.' '.Sentry::getUser()->last_name) ? Sentry::getUser()->first_name.' '.Sentry::getUser()->last_name : Sentry::getUser()->username }}
+                                {{ !empty(Sentry::getUser()->first_name) ? Sentry::getUser()->first_name.' '.Sentry::getUser()->last_name : Sentry::getUser()->username }}
                                 <small>Member since {{ date("F, Y", strtotime(Sentry::getUser()->created_at)) }}</small>
                             </p>
                         </li>
