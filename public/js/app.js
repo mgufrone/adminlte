@@ -39,7 +39,7 @@ $(document).ready(function()
     });
 });
 $(document).ajaxComplete(function() {
-    $("input[type='checkbox'], input[type='radio']").iCheck({
+    $("input[type='checkbox'], input[type='radio']").not('.ignore').not('.bootswitch').iCheck({
         checkboxClass: 'icheckbox_minimal',
         radioClass: 'iradio_minimal'
     });
