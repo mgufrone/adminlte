@@ -58,7 +58,7 @@ class AdminlteServiceProvider extends ServiceProvider {
             "packages/jakubsacha/adminlte/AdminLTE/js/AdminLTE/app.js",
             "packages/jakubsacha/adminlte/js/app.js",
         ];
-        if(\App::environment('local'))
+        if(\App::environment('production'))
           $js_assets = [
               "http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js",
               "http://code.jquery.com/jquery-migrate-1.2.1.min.js",
@@ -87,7 +87,7 @@ class AdminlteServiceProvider extends ServiceProvider {
             "packages/jakubsacha/adminlte/AdminLTE/css/datatables/dataTables.bootstrap.css",
             "packages/jakubsacha/adminlte/css/AdminLTE.css",
         ];
-        if(\App::environment('local'))
+        if(\App::environment('production'))
           $css_assets = [
               "packages/jakubsacha/adminlte/css/admin-lte.min.css",
           ];
