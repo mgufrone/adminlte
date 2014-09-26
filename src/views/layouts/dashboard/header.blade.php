@@ -15,6 +15,8 @@
             <ul class="nav navbar-nav">
 
                 @if(Sentry::check())
+
+                {{ (!empty($topPanel)) ? $topPanel : '' }}
                 <!-- <li class="dropdown notifications-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-warning"></i>

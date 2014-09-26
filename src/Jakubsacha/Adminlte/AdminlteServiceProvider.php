@@ -37,10 +37,15 @@ class AdminlteServiceProvider extends ServiceProvider {
         $js_assets = [
             "http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js",
             "http://code.jquery.com/jquery-migrate-1.2.1.min.js",
+            "//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js",
+            "//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js",
+            "//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.js",
             "packages/mrjuliuss/syntara/assets/js/dashboard/base.js",
+            "packages/mrjuliuss/syntara/assets/js/dashboard/user.js",
+            "packages/mrjuliuss/syntara/assets/js/dashboard/group.js",
+            "packages/mrjuliuss/syntara/assets/js/dashboard/permission.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/jquery-ui-1.10.3.min.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/bootstrap.min.js",
-            "//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/morris/morris.min.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/sparkline/jquery.sparkline.min.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
@@ -50,14 +55,21 @@ class AdminlteServiceProvider extends ServiceProvider {
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/daterangepicker/daterangepicker.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/plugins/iCheck/icheck.min.js",
-            "packages/mrjuliuss/syntara/assets/js/dashboard/user.js",
-            "packages/mrjuliuss/syntara/assets/js/dashboard/group.js",
-            "packages/mrjuliuss/syntara/assets/js/dashboard/permission.js",
-            "//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js",
-            "//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.js",
             "packages/jakubsacha/adminlte/AdminLTE/js/AdminLTE/app.js",
             "packages/jakubsacha/adminlte/js/app.js",
         ];
+        if(\App::environment('local'))
+          $js_assets = [
+              "http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js",
+              "http://code.jquery.com/jquery-migrate-1.2.1.min.js",
+              "//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js",
+              "//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js",
+              "//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.js",
+              "packages/mrjuliuss/syntara/assets/js/dashboard/base.js",
+              "packages/mrjuliuss/syntara/assets/js/dashboard/user.js",
+              "packages/mrjuliuss/syntara/assets/js/dashboard/group.js",
+              "packages/jakubsacha/adminlte/js/admin-lte.min.js",
+          ];
         foreach($js_assets as $js)
         {
             app('assets')->registerJs($js);
@@ -75,6 +87,10 @@ class AdminlteServiceProvider extends ServiceProvider {
             "packages/jakubsacha/adminlte/AdminLTE/css/datatables/dataTables.bootstrap.css",
             "packages/jakubsacha/adminlte/css/AdminLTE.css",
         ];
+        if(\App::environment('local'))
+          $css_assets = [
+              "packages/jakubsacha/adminlte/css/admin-lte.min.css",
+          ];
         foreach($css_assets as $css)
         {
             app('assets')->registerCss($css);
