@@ -3,8 +3,8 @@
         <meta charset="UTF-8">
         <title>{{ (!empty($siteName)) ? $siteName : "Syntara"}} - {{isset($title) ? $title : '' }}</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-        
-        {{app('assets')->renderCss()}}
+       
+        @yield('css', app('assets')->renderCss())
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,7 +27,7 @@
             @include(Config::get('adminlte::views.content'))
 
         </div>
-        {{app('assets')->renderJs()}}
+        @yield('js', app('assets')->renderJs())
 
         @yield('custom-script')
     </body>
