@@ -35,8 +35,8 @@ class AdminlteServiceProvider extends ServiceProvider {
             return new Helpers\Assets();
         });
         $js_assets = [
-            "http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js",
-            "http://code.jquery.com/jquery-migrate-1.2.1.min.js",
+            "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js",
+            "//code.jquery.com/jquery-migrate-1.2.1.min.js",
             "//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js",
             "//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js",
             "//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.js",
