@@ -141,8 +141,7 @@ module.exports = function(grunt) {
     var loaded_fonts = content.toString().match(regex);
     content = content.toString().replace(regex, '');
     content = loaded_fonts.join("\n")+content.toString();
-    console.log(loaded_fonts.join("\n"));
-    console.log(file_path);
+    
     grunt.file.write(file_path, content);
   });
   grunt.registerTask('default', ['jshint', 'cssUrlRewrite', 'concat', 'uglify', 'cssUrlRewriters']);
