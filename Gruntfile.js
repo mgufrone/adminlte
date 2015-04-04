@@ -62,9 +62,9 @@ module.exports = function(grunt) {
           "public/AdminLTE/js/plugins/sparkline/jquery.sparkline.min.js",
           "public/AdminLTE/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
           "public/AdminLTE/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
-          "public/AdminLTE/js/plugins/fullcalendar/fullcalendar.min.js",
           "public/AdminLTE/js/plugins/jqueryKnob/jquery.knob.js",
           "public/AdminLTE/js/plugins/daterangepicker/daterangepicker.js",
+          "public/AdminLTE/js/plugins/fullcalendar/fullcalendar.min.js",
           "public/AdminLTE/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
           "public/AdminLTE/js/plugins/iCheck/icheck.min.js",
           "public/AdminLTE/js/AdminLTE/app.js",
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
     var loaded_fonts = content.toString().match(regex);
     content = content.toString().replace(regex, '');
     content = loaded_fonts.join("\n")+content.toString();
-    
+
     grunt.file.write(file_path, content);
   });
   grunt.registerTask('default', ['jshint', 'cssUrlRewrite', 'concat', 'uglify', 'cssUrlRewriters']);
